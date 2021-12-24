@@ -26,5 +26,20 @@ namespace eCommerce.Controllers
 
             return View();
         }
+
+        public ActionResult Shop()
+        {
+            ViewBag.Message = "Welcome to shopping page .";
+
+            return View();
+
+        }
+        public ActionResult Cart()
+        {
+            ViewBag.Message = " welcome to Cart page  .";
+
+            return View();
+
+        }
     }
 }
