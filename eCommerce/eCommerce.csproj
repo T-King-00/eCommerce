@@ -303,6 +303,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Views\StyleSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -354,6 +355,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shopping\ShopItem.cshtml" />
     <Content Include="Views\Shopping\ShopNow.cshtml" />
+    <Content Include="Views\Shopping\Cart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
