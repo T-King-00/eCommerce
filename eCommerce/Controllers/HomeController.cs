@@ -10,6 +10,7 @@ namespace eCommerce.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Your application page.";
             return View();
         }
 
