@@ -18,7 +18,7 @@ namespace eCommerce.Models
             new Product{ProductId=1045,Name="PS4"},
             new Product{ProductId=3141,Name="XBOX ONE"},
             };
-            products.ForEach(s => context.products.Add(s));
+            products.ForEach(s => context.Products.Add(s));
             context.SaveChanges();
         }
     } 
