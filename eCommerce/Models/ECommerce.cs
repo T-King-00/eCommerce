@@ -9,7 +9,7 @@ namespace eCommerce.Models
 {
     public class ECommerce:DbContext
     {
-        public ECommerce() : base("Ecommerce")
+        public ECommerce() : base("DefaultConnection")
         {
 
         }
