@@ -36,10 +36,10 @@ namespace eCommerce.Controllers
         public ActionResult Cart()
         {
 
-
-
-
-
+            return View();
+        }
+        public ActionResult CheckOut()
+        {
 
             return View();
         }

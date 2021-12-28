@@ -19,8 +19,6 @@ namespace eCommerce.Controllers
 
 
 
-
-
         //   Not used 
         public ActionResult Index()
         {
