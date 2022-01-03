@@ -9,6 +9,12 @@ namespace eCommerce.Controllers
     public class HomeController : Controller
     {
 
+
+        public ActionResult Index()
+        {
+
+            return View();  
+        }
         public ActionResult ShopNow()
         {
 
@@ -16,15 +22,15 @@ namespace eCommerce.Controllers
             return View("ShopNow");
         }
 
-
-
-
-        //   Not used 
-        public ActionResult Index()
+        public ActionResult HomePage()
         {
             return View();
         }
 
+
+
+        //   Not used 
+       
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

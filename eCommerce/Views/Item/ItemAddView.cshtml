@@ -1,0 +1,84 @@
+﻿@model eCommerce.ViewModel.ItemViewModel
+@{
+    ViewBag.Title = "ItemAddView";
+}
+
+<script type="text/javascript">
+
+    function ResetItem() {
+        $("#CategoryId").val("1");
+        $("#ItemCode").val("");
+        $("#ItemName").val("");
+        $("#Description").val("");
+        $("#ItemPrice").val("");
+        $("#ImagePath").val("");
+    }
+
+</script>
+
+@using (Html.BeginForm("SaveRecord", "item", FormMethod.Post,new { enctype = "multipart/form-data"}))
+{
+<div class="container">
+    <div class="col-md-4">
+        <div class="form-group">
+            Category
+            @Html.DropDownListFor(model => model.CategoryID, new SelectList(Model.CategorySelectListItem, "Value", "Text"),
+new { @claass = "form-control" })
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            Item code
+            @Html.TextBoxFor(model => model.ItemCode, new { @class = "form-control" })
+
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            Item name
+            @Html.TextBoxFor(model => model.ItemName, new { @claass = "form-control" })
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            Item Price :
+            @Html.TextBoxFor(model => model.ItemPrice, new { @claass = "form-control" })
+        </div>
+    </div>
+
+
+
+
+    <div class="col-md-4">
+        <div class="form-group">
+            Description
+            @Html.TextBoxFor(model => model.Description, new { @claass = "form-control"  ,@style="text-align: center;"})
+        </div>
+    </div>
+    <div class="col-md-4">
+
+    <div class="form-group">
+            Item picture :
+
+            <h2>UploadFile</h2>
+
+                <div>
+                    @Html.TextBox("file", "", new { type = "file" }) <br />
+                   
+                </div>
+        </div>
+    </div>
+
+    <div>
+        <input id="btnReset" onclick="ResetItem();" type="button" value="Reset" name="reset" class="btn btn-danger" />
+        <input id="btnSave" type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+
+
+</div> 
+}
